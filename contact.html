@@ -1,0 +1,96 @@
+<!--  -->
+<!--  -->
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&family=Playfair+Display:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Roast & Ritual</title>
+  <meta name="description" content="Contact Roast & Ritual — hours, location, and book an event." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --heading: 'Playfair Display', serif; --body: 'Inter', system-ui, sans-serif; }
+    h1,h2,h3 { font-family: var(--heading); }
+    body { font-family: var(--body); }
+  </style>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-800 antialiased">
+  <header class="w-full max-w-none bg-white shadow-sm sticky top-0 z-40">
+    <div class="w-full max-w-none px-6 py-4 flex items-center justify-between">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-semibold">R&amp;R</div>
+        <div>
+          <div class="text-lg font-semibold">Roast & Ritual</div>
+          <div class="text-xs text-gray-500 -mt-1">Artisan Coffee & Pastries</div>
+        </div>
+      </a>
+      <nav class="flex items-center gap-6">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full max-w-none px-6 md:px-12 lg:px-24 py-12">
+    <h1 class="text-3xl font-semibold">Visit or Get in Touch</h1>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="font-semibold">Location & Hours</h2>
+        <p class="mt-2 text-gray-700">123 Bean Lane<br/>Neighborhood, City 00000</p>
+        <div class="mt-4 text-sm text-gray-600">
+          <div>Hours:</div>
+          <div class="mt-1">Mon–Fri: 7:00 AM – 6:00 PM</div>
+          <div>Sat–Sun: 8:00 AM – 5:00 PM</div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold">Phone</h3>
+          <a href="tel:+1234567890" class="text-amber-600">+1 (234) 567-890</a>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold">Map</h3>
+          <div class="mt-2 w-full h-40 rounded-md overflow-hidden border">
+            <img src="https://images.unsplash.com/photo-1734585123087-cc579225f09e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwzfHxNYXAlMjBzbmFwc2hvdCUyMGlsbHVzdHJhdGlvbiUyMHNob3dpbmclMjBhJTIwY29mZmVlJTIwc2hvcCUyMHBpbm5lZCUyMGluJTIwYSUyMGZyaWVuZGx5JTIwbmVpZ2hib3Job29kfGVufDB8MHx8fDE3NTUyNTE3ODl8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Map" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h2 class="font-semibold">Send us a message</h2>
+        <form id="contactForm" class="mt-4 grid grid-cols-1 gap-3">
+          <input type="text" id="name" placeholder="Your name" required class="px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          <input type="email" id="email" placeholder="you@domain.com" required class="px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          <input type="text" id="subject" placeholder="Subject" class="px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          <textarea id="message" rows="5" placeholder="Your message" required class="px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-300"></textarea>
+          <div class="flex items-center justify-between">
+            <button type="submit" class="px-4 py-3 bg-amber-600 text-white rounded-md hover:bg-amber-500">Send Message</button>
+            <div id="contactStatus" class="text-sm text-green-600 hidden">Message sent — we’ll be in touch!</div>
+          </div>
+        </form>
+
+        <div class="mt-6 text-sm text-gray-600">
+          For event bookings or wholesale inquiries, mention it in your message and we’ll follow up with details.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full max-w-none bg-white border-t">
+    <div class="w-full max-w-none px-6 md:px-12 lg:px-24 py-6 flex items-center justify-between">
+      <div class="text-sm text-gray-600">© Roast & Ritual</div>
+      <div class="flex gap-4">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="text-sm text-gray-700">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="text-sm text-gray-700">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
