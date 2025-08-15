@@ -1,0 +1,191 @@
+<!--  -->
+<!--  -->
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&family=Playfair+Display:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roast & Ritual — Coffee Shop</title>
+  <meta name="description" content="Roast & Ritual — Artisan coffee, cozy space, and crafted pastries." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --heading: 'Playfair Display', serif; --body: 'Inter', system-ui, sans-serif; }
+    html,body,#app { height: 100%; }
+    h1,h2,h3 { font-family: var(--heading); }
+    body { font-family: var(--body); }
+  </style>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAV -->
+  <header class="w-full max-w-none bg-white shadow-sm sticky top-0 z-40">
+    <div class="w-full max-w-none px-6 py-4 flex items-center justify-between">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-semibold transform transition hover:scale-105">R&amp;R</div>
+        <div>
+          <div class="text-lg font-semibold">Roast & Ritual</div>
+          <div class="text-xs text-gray-500 -mt-1">Artisan Coffee & Pastries</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">Contact</a>
+        <button id="openNewsletter" class="ml-2 px-4 py-2 bg-amber-600 text-white rounded-md text-sm hover:bg-amber-500 transition">Subscribe</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="p-2 rounded-md border border-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden px-6 pb-4 md:hidden">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="block py-2 text-gray-700">Home</a>
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="block py-2 text-gray-700">About</a>
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="block py-2 text-gray-700">Contact</a>
+      <button id="mobileSubscribe" class="mt-2 w-full px-4 py-2 bg-amber-600 text-white rounded-md">Subscribe</button>
+    </div>
+  </header>
+
+  <main id="app" class="w-full max-w-none">
+    <!-- HERO -->
+    <section class="w-full max-w-none relative">
+      <div class="w-full h-[64vh] md:h-[72vh] bg-cover bg-center" style="background-image: url('https://pixabay.com/get/gd6e1b4db7dead7370db627b470bb753260056ff29a18b9f1a69221d4ecc8aa0393879a04031550b8f72700e6c18ab89787307d212a0c85c894d8275798f96b94_640.jpg');">
+        <div class="w-full h-full bg-gradient-to-b from-transparent via-black/10 to-black/30 flex items-center">
+          <div class="w-full max-w-none px-6 md:px-12 lg:px-24 text-white">
+            <div class="w-full max-w-none md:w-10/12 lg:w-8/12">
+              <h1 class="text-4xl md:text-6xl leading-tight font-semibold drop-shadow-lg">Roast & Ritual</h1>
+              <p class="mt-4 text-lg md:text-xl text-amber-100/90">Hand-roasted beans. Seasonal single-origin pours. A place to slow down.</p>
+              <div class="mt-6 flex gap-3">
+                <a href="#menu" class="inline-block px-5 py-3 bg-amber-600 text-white rounded-md shadow hover:scale-105 transform transition">See Menu</a>
+                <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="inline-block px-5 py-3 border border-white/30 text-white rounded-md hover:bg-white/10 transition">Visit Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU + FILTER -->
+    <section id="menu" class="w-full max-w-none px-6 md:px-12 lg:px-24 py-12">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold">Our Menu</h2>
+          <p class="mt-2 text-gray-600">Curated espresso, brewed coffee, and freshly-baked pastries — all made with care.</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <label class="text-sm text-gray-600">Filter:</label>
+          <div class="flex gap-2 bg-white p-1 rounded-md shadow-sm">
+            <button data-filter="all" class="filterBtn px-3 py-1 text-sm rounded-md bg-amber-50 text-amber-600 font-medium">All</button>
+            <button data-filter="espresso" class="filterBtn px-3 py-1 text-sm rounded-md hover:bg-gray-100">Espresso</button>
+            <button data-filter="brew" class="filterBtn px-3 py-1 text-sm rounded-md hover:bg-gray-100">Brew</button>
+            <button data-filter="pastry" class="filterBtn px-3 py-1 text-sm rounded-md hover:bg-gray-100">Pastry</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="menuGrid" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- JS will render items here -->
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="px-6 py-3 border border-amber-600 text-amber-600 rounded-md hover:bg-amber-50 transition">Learn about our beans</a>
+      </div>
+    </section>
+
+    <!-- GALLERY / FEATURES -->
+    <section class="w-full max-w-none bg-white px-6 md:px-12 lg:px-24 py-12 border-t">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex gap-4 items-start">
+          <img src="https://images.unsplash.com/photo-1643626826671-e2a79256036a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw2fHxDbG9zZS11cCUyMG9mJTIwbGF0dGUlMjBhcnQlMjBpbiUyMGElMjBjZXJhbWljJTIwY3VwJTJDJTIwdG9wJTIwdmlld3xlbnwwfDB8fHwxNzU1MjUxNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Latte art" class="w-20 h-20 rounded-lg object-cover shadow-sm" />
+          <div>
+            <h3 class="font-semibold">Crafted Coffee</h3>
+            <p class="mt-1 text-sm text-gray-600">Espresso-forward pours, precise extraction, and seasonal single-origin features.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <img src="https://images.unsplash.com/photo-1733210439079-c18c4096cd9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw5fHxGcmVzaGx5JTIwYmFrZWQlMjBjcm9pc3NhbnRzJTIwb24lMjBhJTIwd29vZGVuJTIwYm9hcmR8ZW58MHwwfHx8MTc1NTI1MTc4NHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Pastries" class="w-20 h-20 rounded-lg object-cover shadow-sm" />
+          <div>
+            <h3 class="font-semibold">House Pastries</h3>
+            <p class="mt-1 text-sm text-gray-600">Daily-baked pastries made to pair with our coffees.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <img src="https://images.unsplash.com/photo-1617441250347-f0c5e19a0fa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw5fHxCYXJpc3RhJTIwc3RlYW1pbmclMjBtaWxrJTIwb3ZlciUyMGFuJTIwZXNwcmVzc28lMjBtYWNoaW5lfGVufDB8MHx8fDE3NTUyNTE3ODV8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Barista" class="w-20 h-20 rounded-lg object-cover shadow-sm" />
+          <div>
+            <h3 class="font-semibold">Community Space</h3>
+            <p class="mt-1 text-sm text-gray-600">Cozy seating, friendly service, and free Wi‑Fi for guests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="w-full max-w-none px-6 md:px-12 lg:px-24 py-12 bg-amber-50">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-xl font-semibold">Swing by for a pour</h3>
+          <p class="mt-1 text-gray-700">We roast in small batches and love sharing tasting notes. See our hours and location.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-500 transition">Get Directions</a>
+          <a href="#menu" class="px-4 py-2 border border-amber-600 text-amber-600 rounded-md hover:bg-amber-50 transition">View Menu</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full max-w-none bg-white border-t mt-12">
+    <div class="w-full max-w-none px-6 md:px-12 lg:px-24 py-8 flex flex-col md:flex-row items-start justify-between gap-6">
+      <div>
+        <div class="text-lg font-semibold">Roast & Ritual</div>
+        <div class="text-sm text-gray-600 mt-1">123 Bean Lane — Open daily 7am–6pm</div>
+      </div>
+      <div class="flex gap-6">
+        <div>
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">About</a>
+        </div>
+        <div>
+          <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="text-sm text-gray-700 hover:text-amber-600 transition">Contact</a>
+        </div>
+      </div>
+      <div class="mt-2 md:mt-0">
+        <div class="text-sm text-gray-600">Follow us</div>
+        <div class="flex gap-3 mt-2">
+          <a href="#" class="text-gray-500 hover:text-gray-800 transition">Instagram</a>
+          <a href="#" class="text-gray-500 hover:text-gray-800 transition">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NEWSLETTER MODAL -->
+  <div id="newsletterModal" class="fixed inset-0 hidden z-50 items-center justify-center bg-black/40">
+    <div class="w-full max-w-none md:w-[720px] bg-white rounded-lg p-6 mx-4 md:mx-0 shadow-lg">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold">Stay in the loop</h3>
+          <p class="mt-1 text-gray-600">Exclusive drops, small-batch roasts, and events — straight to your inbox.</p>
+        </div>
+        <button id="closeNewsletter" class="text-gray-500 hover:text-gray-700">✕</button>
+      </div>
+      <form id="newsletterForm" class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <input type="email" id="newsletterEmail" placeholder="you@domain.com" required class="col-span-2 px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-300" />
+        <button type="submit" class="px-4 py-3 bg-amber-600 text-white rounded-md hover:bg-amber-500">Subscribe</button>
+      </form>
+      <p id="newsletterMsg" class="mt-3 text-sm text-green-600 hidden">Thanks! You're subscribed.</p>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
